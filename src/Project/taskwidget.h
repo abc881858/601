@@ -24,6 +24,7 @@ public:
     explicit TaskWidget(QWidget *parent = nullptr);
     ~TaskWidget();
     QString type_string();
+    void init();
 private:
     Ui::TaskWidget *ui;
     QUdpSocket *m_udp;
@@ -35,6 +36,8 @@ private:
     QString m_exePath;
 public slots:
     void readyRead();
+    void task_start();
+    void task_edit();
 private slots:
     void on_add_task_clicked();
     void on_buttonReturn_clicked();
@@ -50,4 +53,5 @@ private slots:
     void on_task_finish_clicked();
     void on_checkBox_type_left_clicked();
     void on_checkBox_type_right_clicked();
+    void on_finish_edit_clicked();
 };

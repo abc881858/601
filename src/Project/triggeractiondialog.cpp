@@ -124,6 +124,60 @@ void TriggerActionDialog::selectItemByButtonId(int buttonId)
     qDebug() << "No item found with buttonId:" << buttonId;
 }
 
+QString TriggerActionDialog::name_from_id(int targetButtonId)
+{
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+        QTreeWidgetItem *currentItem = *it;
+        int currentButtonId = currentItem->data(0, Qt::UserRole).toInt();
+
+        if (currentButtonId == targetButtonId) {
+            // 找到匹配的 buttonId，开始构建路径
+            QStringList path;
+            while (currentItem) {
+                path.prepend(currentItem->text(0));  // 将当前节点文本添加到路径前面
+                currentItem = currentItem->parent();  // 向上遍历父节点
+            }
+            return path.join(" - ");  // 用 "-" 连接所有路径部分
+        }
+
+        ++it;
+    }
+
+    return QString();  // 如果没有找到匹配的节点，返回空字符串
+}
+
+void TriggerActionDialog::selectItemByPath(const QString &path)
+{
+    // 按照路径分割
+    QStringList pathParts = path.split(" - ");
+
+    // 遍历树形控件的所有项
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+        QTreeWidgetItem *currentItem = *it;
+
+        // 构建当前项的路径
+        QStringList currentPath;
+        QTreeWidgetItem *item = currentItem;
+        while (item) {
+            currentPath.prepend(item->text(0));  // 从当前项向上遍历，构建路径
+            item = item->parent();
+        }
+
+        // 如果路径匹配，则选中该项
+        if (currentPath == pathParts) {
+            currentItem->setCheckState(0, Qt::Checked);
+            return;
+        }
+
+        ++it;
+    }
+
+    // 如果没有找到匹配的项，可以打印调试信息
+    qDebug() << "No item found with path:" << path;
+}
+
 TriggerActionDialog::~TriggerActionDialog()
 {
     delete ui;

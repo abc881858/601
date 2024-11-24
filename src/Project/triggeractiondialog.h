@@ -16,6 +16,8 @@ public:
     QString result_name();
     int result_id();
     void selectItemByButtonId(int buttonId);
+    QString name_from_id(int targetButtonId);
+    void selectItemByPath(const QString &path);
 private:
     Ui::TriggerActionDialog *ui;
     QString m_result_name;

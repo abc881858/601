@@ -8,6 +8,7 @@ SOURCES += \
     answerlistitem.cpp \
     configlistitem.cpp \
     evaluatewidget.cpp \
+    eventchilditem.cpp \
     eventitem.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
     answerlistitem.h \
     configlistitem.h \
     evaluatewidget.h \
+    eventchilditem.h \
     eventitem.h \
     mainwindow.h \
     packet.h \
@@ -48,6 +50,7 @@ FORMS += \
     answerlistitem.ui \
     configlistitem.ui \
     evaluatewidget.ui \
+    eventchilditem.ui \
     eventitem.ui \
     mainwindow.ui \
     questionitem.ui \

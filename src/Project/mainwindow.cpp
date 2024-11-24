@@ -95,6 +95,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug() << "database open success!";
     }
 
+    ui->page_1->init();
     ui->page_5->init();
 }
 

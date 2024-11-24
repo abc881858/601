@@ -36,6 +36,8 @@ TaskWidget::TaskWidget(QWidget *parent) :
     connect(m_task_timer, &QTimer::timeout, [=](){
         ui->timeEdit->setTime(ui->timeEdit->time().addSecs(1));
     });
+
+    ui->finish_edit->hide();
 }
 
 TaskWidget::~TaskWidget()
@@ -46,6 +48,133 @@ TaskWidget::~TaskWidget()
         process.waitForFinished(3000);
     }
     delete ui;
+}
+
+void TaskWidget::init()
+{
+    QSqlQuery query(QString("SELECT * FROM task"));
+    while (query.next()) {
+        TaskListItem *taskListItem = new TaskListItem(this);
+        connect(taskListItem, &TaskListItem::task_start, this, &TaskWidget::task_start);
+        connect(taskListItem, &TaskListItem::task_edit, this, &TaskWidget::task_edit);
+        taskListItem->set_task_name(query.value(0).toString());
+        qDebug() << query.value(0).toString();
+        taskListItem->set_create_name(query.value(1).toString());
+        taskListItem->set_create_time(query.value(2).toDateTime());
+        taskListItem->set_task_description(query.value(3).toString());
+        taskListItem->set_task_type(query.value(4).toString());
+        taskListItem->set_task_path(query.value(5).toString());
+        taskListItem->set_task_questionnaire(query.value(6).toString());
+        taskListItem->set_task_event(query.value(7).toString());
+        taskListItem->set_trigger_questionnaire(query.value(8).toString());
+        taskListItem->set_trigger_event(query.value(9).toString());
+        ui->taskListLayout->insertWidget(0, taskListItem);
+    }
+}
+
+void TaskWidget::task_start()
+{
+    //TODO: 提示先关闭上一个任务 然后才能开启新任务
+    ui->label_task_name->setText(ui->task_name->text());
+    ui->label_task_type->setText(type_string());
+    ui->stack_widget->setCurrentIndex(4);
+
+    if (!m_exePath.isEmpty())
+    {
+        process.start(m_exePath);
+    }
+
+    m_task_timer->start(1000);
+}
+
+void TaskWidget::task_edit()
+{
+    ui->buttonSave->hide();
+    ui->finish_edit->show();
+
+    TaskListItem *taskListItem = qobject_cast<TaskListItem*>(sender());
+    ui->task_name->setText(taskListItem->task_name());
+    ui->task_description->setText(taskListItem->task_description());
+    QStringList task_type_list = taskListItem->task_type().split('-');
+    if(task_type_list.size() == 2)
+    {
+        if(ui->checkBox_type_left->text() == task_type_list.at(0))
+        {
+            ui->checkBox_type_left->setChecked(true);
+            if(ui->checkBox_left_sub1->text() == task_type_list.at(1))
+            {
+                ui->checkBox_left_sub1->setChecked(true);
+            }
+            else if(ui->checkBox_left_sub2->text() == task_type_list.at(1))
+            {
+                ui->checkBox_left_sub2->setChecked(true);
+            }
+            else if(ui->checkBox_left_sub3->text() == task_type_list.at(1))
+            {
+                ui->checkBox_left_sub3->setChecked(true);
+            }
+            else if(ui->checkBox_left_sub4->text() == task_type_list.at(1))
+            {
+                ui->checkBox_left_sub4->setChecked(true);
+            }
+        }
+        else
+        {
+            ui->checkBox_type_right->setChecked(true);
+            if(ui->checkBox_right_sub1->text() == task_type_list.at(1))
+            {
+                ui->checkBox_right_sub1->setChecked(true);
+            }
+            else if(ui->checkBox_right_sub2->text() == task_type_list.at(1))
+            {
+                ui->checkBox_right_sub2->setChecked(true);
+            }
+            else if(ui->checkBox_right_sub3->text() == task_type_list.at(1))
+            {
+                ui->checkBox_right_sub3->setChecked(true);
+            }
+            else if(ui->checkBox_right_sub4->text() == task_type_list.at(1))
+            {
+                ui->checkBox_right_sub4->setChecked(true);
+            }
+        }
+    }
+
+    //TODO: m_exePath 放入 TaskListItem 类
+    m_exePath = taskListItem->task_path();
+
+    m_question_item_count = 0;
+    while (QLayoutItem* item = ui->layout_question->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+    ui->layout_question->addStretch();
+
+    while (QLayoutItem* item = ui->layout_event->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+    ui->layout_event->addStretch();
+
+    QStringList task_questionnaire_list = taskListItem->task_questionnaire().split(',');
+    QStringList trigger_questionnaire_list = taskListItem->trigger_questionnaire().split(',');
+    for(int i=0; i<task_questionnaire_list.size(); i++)
+    {
+        QuestionItem *questionItem = new QuestionItem;
+        questionItem->setNameIndex(1 + m_question_item_count);
+        questionItem->set_select_questionnaire(task_questionnaire_list.at(i));
+        questionItem->set_trigger_action(trigger_questionnaire_list.at(i).toInt());
+        ui->layout_question->insertWidget(1 + m_question_item_count, questionItem);
+        m_question_item_count++;
+    }
+
+    taskListItem->task_event();
+
+    ui->stack_widget->setCurrentIndex(1);
 }
 
 void TaskWidget::readyRead()
@@ -65,6 +194,26 @@ void TaskWidget::on_add_task_clicked()
     ui->task_name->clear();
     ui->task_description->clear();
     ui->checkBox_type_left->setChecked(false);
+
+    while (QLayoutItem* item = ui->layout_question->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+    ui->layout_question->addStretch();
+
+    while (QLayoutItem* item = ui->layout_event->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+    ui->layout_event->addStretch();
+
+    ui->buttonSave->show();
+    ui->finish_edit->hide();
+
     ui->stack_widget->setCurrentIndex(1);
 }
 
@@ -123,29 +272,49 @@ QString TaskWidget::type_string()
 
 void TaskWidget::on_buttonSave_clicked()
 {
-    TaskListItem *item = new TaskListItem(this);
-    connect(item, &TaskListItem::task_start, [=](){
-        ui->label_task_name->setText(ui->task_name->text());
-        ui->label_task_type->setText(type_string());
-        ui->stack_widget->setCurrentIndex(4);
-        m_task_timer->start(1000);
-    });
-    ui->taskListLayout->insertWidget(0, item);
+    QStringList task_questionnaire_list;
+    for(int i=0; i<ui->layout_question->count(); i++)
+    {
+        QLayoutItem* item = ui->layout_question->itemAt(i);
+        if (!item) continue;
 
-    // for(int i=0; i<ui->layout_question->count(); i++)
-    // {
-    //     QuestionItem *item = qobject_cast<QuestionItem *>(ui->layout_question->itemAt(i)->widget());
-    //     item->task_name();
-    // }
+        QWidget* widget = item->widget();
+        if (widget)
+        {
+            QuestionItem* questionItem = qobject_cast<QuestionItem*>(widget);
+            if (questionItem) {
+                qDebug() << "QuestionItem name:" << questionItem->name();
+                task_questionnaire_list << questionItem->name();
+            }
+        }
+    }
 
-    // QSqlQuery query(QString("INSERT INTO task (task_user, task_name, task_type, task_description, task_path, task_questionnaire, task_event, trigger_questionnaire, trigger_event) "
-    //                 "VALUES ('%1','%2','%3','%4','%5','%6','%7','%8','%9');").arg("小菜无敌")
-    //                 .arg(ui->task_name->text())
-    //                 .arg(type_string())
-    //                 .arg(ui->task_description->toPlainText())
-    //                 .arg(m_exePath)
-    //                 .arg());
-    // query.exec();
+    QStringList task_event_list;
+    QStringList trigger_questionnaire_list;
+    QStringList trigger_event_list;
+
+    QSqlQuery query;
+    QString str = QString("INSERT INTO task (task_name, create_name, create_time, task_description, task_type, task_path, task_questionnaire, task_event, trigger_questionnaire, trigger_event) "
+                          "VALUES ('%1', '%2', %3, '%4', '%5', '%6', '%7', '%8', '%9', '%10');")
+            .arg(ui->task_name->text(), "小菜无敌")
+            .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss"))
+            .arg(ui->task_description->toPlainText())
+            .arg(type_string())
+            .arg(m_exePath)
+            .arg(task_questionnaire_list.join(','))
+            .arg(task_event_list.join(','))
+            .arg(trigger_questionnaire_list.join(','))
+            .arg(trigger_event_list.join(','));
+    query.exec(str);
+
+    TaskListItem *taskListItem = new TaskListItem(this);
+    connect(taskListItem, &TaskListItem::task_start, this, &TaskWidget::task_start);
+    connect(taskListItem, &TaskListItem::task_edit, this, &TaskWidget::task_edit);
+    taskListItem->set_task_name(ui->task_name->text());
+    taskListItem->set_create_name("小菜无敌");
+    taskListItem->set_create_time(QDateTime::currentDateTime());
+    taskListItem->set_task_description(ui->task_description->toPlainText());
+    ui->taskListLayout->insertWidget(0, taskListItem);
 
     ui->stack_widget->setCurrentIndex(0);
 }
@@ -173,10 +342,6 @@ void TaskWidget::on_buttonBack_clicked()
 void TaskWidget::on_buttonOpen_clicked()
 {
     m_exePath = QFileDialog::getOpenFileName(this, "选择可执行文件", "./", "可执行文件 (*.exe);;所有文件 (*)");
-    if (!m_exePath.isEmpty())
-    {
-        process.start(m_exePath);
-    }
 }
 
 void TaskWidget::on_add_question_clicked()
@@ -204,6 +369,12 @@ void TaskWidget::on_task_finish_clicked()
     ui->stack_widget->setCurrentIndex(0);
     m_task_timer->stop();
     ui->timeEdit->setTime(QTime(0,0,0,0));
+
+    if (process.state() == QProcess::Running)
+    {
+        process.terminate();
+        process.waitForFinished(3000);
+    }
 }
 
 void TaskWidget::on_checkBox_type_left_clicked()
@@ -217,3 +388,87 @@ void TaskWidget::on_checkBox_type_right_clicked()
     ui->widget_type_left->hide();
     ui->widget_type_right->show();
 }
+
+void TaskWidget::on_finish_edit_clicked()
+{
+    QStringList task_questionnaire_list;
+    for(int i=0; i<ui->layout_question->count(); i++)
+    {
+        QLayoutItem* item = ui->layout_question->itemAt(i);
+        if (!item) continue;
+
+        QWidget* widget = item->widget();
+        if (widget)
+        {
+            QuestionItem* questionItem = qobject_cast<QuestionItem*>(widget);
+            if (questionItem) {
+                qDebug() << "QuestionItem name:" << questionItem->name();
+                task_questionnaire_list << questionItem->name();
+            }
+        }
+    }
+
+    QStringList task_event_list;
+    for(int i=0; i<ui->layout_event->count(); i++)
+    {
+        QLayoutItem* item = ui->layout_event->itemAt(i);
+        if (!item) continue;
+
+        QWidget* widget = item->widget();
+        if (widget)
+        {
+            EventItem* eventItem = qobject_cast<EventItem*>(widget);
+            if (eventItem) {
+                qDebug() << "EventItem name:" << eventItem->name();
+                task_event_list << eventItem->name();
+            }
+        }
+    }
+
+    QStringList trigger_questionnaire_list;
+    QStringList trigger_event_list;
+
+    QSqlQuery query;
+    QString task_name = ui->task_name->text();
+    QString str = QString("UPDATE task "
+                          "SET create_name = '%1', create_time = '%2', "
+                          "task_description = '%3', task_type = '%4', task_path = '%5', "
+                          "task_questionnaire = '%6', task_event = '%7', "
+                          "trigger_questionnaire = '%8', trigger_event = '%9' "
+                          "WHERE task_name = '%10';")
+            .arg("小菜无敌")
+            .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss"))  // 更新时间
+            .arg(ui->task_description->toPlainText())                           // 更新任务描述
+            .arg(type_string())                                                 // 更新任务类型
+            .arg(m_exePath)                                                     // 更新任务路径
+            .arg(task_questionnaire_list.join(','))                             // 更新问卷列表
+            .arg(task_event_list.join(','))                                     // 更新事件列表
+            .arg(trigger_questionnaire_list.join(','))                          // 更新触发问卷列表
+            .arg(trigger_event_list.join(','))                                  // 更新触发事件列表
+            .arg(task_name);                                                    // 指定更新的任务名
+    query.exec(str);
+
+    for(int i=0; i<ui->taskListLayout->count(); i++)
+    {
+        QLayoutItem* item = ui->taskListLayout->itemAt(i);
+        if (!item) continue;
+
+        QWidget* widget = item->widget();
+        if (widget)
+        {
+            TaskListItem* taskListItem = qobject_cast<TaskListItem*>(widget);
+            if (taskListItem) {
+                if(taskListItem->task_name() == ui->task_name->text())
+                {
+                    taskListItem->set_create_name("小菜无敌");
+                    taskListItem->set_create_time(QDateTime::currentDateTime());
+                    taskListItem->set_task_description(ui->task_description->toPlainText());
+                    break;
+                }
+            }
+        }
+    }
+
+    ui->stack_widget->setCurrentIndex(0);
+}
+

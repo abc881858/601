@@ -146,7 +146,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="preview">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -159,7 +159,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_8">
+          <widget class="QPushButton" name="ok">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -224,7 +224,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_4">
+          <widget class="QSpinBox" name="trigger_hour">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -247,7 +247,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_5">
+          <widget class="QSpinBox" name="trigger_minute">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -270,7 +270,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_6">
+          <widget class="QSpinBox" name="trigger_second">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>

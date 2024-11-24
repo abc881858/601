@@ -215,22 +215,22 @@ QLineEdit:focus,QDateEdit:focus {
                </property>
                <property name="dateTime">
                 <datetime>
-                 <hour>16</hour>
+                 <hour>0</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>22</day>
+                 <day>20</day>
                 </datetime>
                </property>
                <property name="minimumDateTime">
                 <datetime>
-                 <hour>16</hour>
+                 <hour>0</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>22</day>
+                 <day>20</day>
                 </datetime>
                </property>
               </widget>
@@ -264,22 +264,22 @@ QLineEdit:focus,QDateEdit:focus {
                </property>
                <property name="dateTime">
                 <datetime>
-                 <hour>16</hour>
+                 <hour>0</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>22</day>
+                 <day>20</day>
                 </datetime>
                </property>
                <property name="minimumDateTime">
                 <datetime>
-                 <hour>16</hour>
+                 <hour>0</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>22</day>
+                 <day>20</day>
                 </datetime>
                </property>
               </widget>
@@ -407,8 +407,8 @@ QLineEdit:focus,QDateEdit:focus {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>1017</width>
-            <height>635</height>
+            <width>65</width>
+            <height>18</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -455,9 +455,9 @@ background-color: rgb(255, 255, 255);
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-215</y>
+            <y>-167</y>
             <width>1018</width>
-            <height>968</height>
+            <height>920</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -874,10 +874,28 @@ padding: 5px;</string>
              <property name="styleSheet">
               <string notr="true">QWidget#widget_question{background-color: #FFFFFF;}</string>
              </property>
-             <layout class="QVBoxLayout" name="layout_question">
+             <layout class="QVBoxLayout" name="layout_question_tmp">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QWidget" name="widgetE" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <spacer name="horizontalSpacer_8">
                    <property name="orientation">
@@ -917,6 +935,15 @@ padding: 5px;</string>
               <item>
                <widget class="QWidget" name="widgetF" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_28">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <widget class="QPushButton" name="add_question">
                    <property name="text">
@@ -938,6 +965,11 @@ padding: 5px;</string>
                   </spacer>
                  </item>
                 </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_23" native="true">
+                <layout class="QVBoxLayout" name="layout_question"/>
                </widget>
               </item>
              </layout>
@@ -1159,10 +1191,22 @@ padding: 5px;</string>
              <property name="styleSheet">
               <string notr="true">QWidget#widget_event{background-color: #FFFFFF;}</string>
              </property>
-             <layout class="QVBoxLayout" name="layout_event">
+             <layout class="QVBoxLayout" name="layout_event_tmp">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QWidget" name="widget_22" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <spacer name="horizontalSpacer_15">
                    <property name="orientation">
@@ -1202,6 +1246,15 @@ padding: 5px;</string>
               <item>
                <widget class="QWidget" name="widget_24" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <widget class="QPushButton" name="add_event">
                    <property name="text">
@@ -1223,6 +1276,11 @@ padding: 5px;</string>
                   </spacer>
                  </item>
                 </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_28" native="true">
+                <layout class="QVBoxLayout" name="layout_event"/>
                </widget>
               </item>
              </layout>
@@ -1253,6 +1311,13 @@ padding: 5px;</string>
               </item>
               <item>
                <widget class="QPushButton" name="buttonSave">
+                <property name="text">
+                 <string>保存任务</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="finish_edit">
                 <property name="text">
                  <string>保存任务</string>
                 </property>

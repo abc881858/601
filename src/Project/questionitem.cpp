@@ -28,12 +28,36 @@ QuestionItem::~QuestionItem()
     delete ui;
 }
 
+QString QuestionItem::name()
+{
+    return ui->select_questionnaire->currentText();
+}
+
 void QuestionItem::on_trigger_action_clicked()
 {
     TriggerActionDialog dialog;
+    if(ui->trigger_action->text() != "请选择触发动作")
+    {
+        dialog.selectItemByPath(ui->trigger_action->text());
+    }
     if(dialog.exec() == QDialog::Accepted)
     {
         ui->trigger_action->setText(dialog.result_name());
-        dialog.result_id();
+
+        //QSqlQuery query("UPDATE task SET trigger_questionnaire = '%1' WHERE ");
+
+        emit trigger_questionnaire_changed(ui->select_questionnaire->currentText(), dialog.result_id());
     }
+}
+
+void QuestionItem::set_select_questionnaire(QString text)
+{
+    ui->select_questionnaire->setCurrentText(text);
+}
+
+void QuestionItem::set_trigger_action(int id)
+{
+    TriggerActionDialog dialog;
+    dialog.hide();
+    ui->trigger_action->setText(dialog.name_from_id(id));
 }
