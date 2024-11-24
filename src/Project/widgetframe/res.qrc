@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>close.svg</file>
+        <file>fullscreen.svg</file>
+        <file>maximize.svg</file>
+        <file>minimize.svg</file>
+        <file>more-line.svg</file>
+        <file>restore.svg</file>
+        <file>example.icns</file>
+        <file>example.ico</file>
+        <file>example.png</file>
+        <file>dark-style.qss</file>
+        <file>light-style.qss</file>
+        <file>dropDown.png</file>
+        <file>QuestionnaireManagement.png</file>
+        <file>UserManagement.png</file>
+    </qresource>
+</RCC>

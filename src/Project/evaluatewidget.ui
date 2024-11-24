@@ -1,0 +1,2940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EvaluateWidget</class>
+ <widget class="QWidget" name="EvaluateWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1235</width>
+    <height>979</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: rgb(255, 255, 255);
+}
+QPushButton {
+border:none;
+color: black;
+padding:10px;
+}
+
+QPushButton:checked {
+color: blue;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_1">
+        <property name="text">
+         <string>客观评估</string>
+        </property>
+        <property name="icon">
+         <iconset resource="res/mainwindow.qrc">
+          <normaloff>:/mainwindow/2.png</normaloff>:/mainwindow/2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>主观评估</string>
+        </property>
+        <property name="icon">
+         <iconset resource="res/mainwindow.qrc">
+          <normaloff>:/mainwindow/2.png</normaloff>:/mainwindow/2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>综合分析</string>
+        </property>
+        <property name="icon">
+         <iconset resource="res/mainwindow.qrc">
+          <normaloff>:/mainwindow/2.png</normaloff>:/mainwindow/2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>808</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget_2{
+background-color: rgb(255, 255, 255);
+}
+QTabBar::tab {
+	color: black;
+	padding: 3px;
+	margin-left:3px;
+	background-color: transparent;
+	width: 80px;
+    height:40px;
+}
+QTabBar::tab:selected, QTabBar::tab:last:selected, QTabBar::tab:hover {
+	color: blue;
+	padding-left: 3px;
+	padding-bottom: 2px;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_24">
+      <item>
+       <widget class="QStackedWidget" name="rightStackedWidget">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="subPage1">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab">
+             <attribute name="title">
+              <string>眼动</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QWidget" name="widget_3" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="text">
+                    <string>最近眼动数据</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_5">
+                   <property name="text">
+                    <string>眼动总体数据</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>868</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="page">
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>眼动数据表</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_4" native="true">
+                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                     <item>
+                      <widget class="QWidget" name="widget_5" native="true">
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <item>
+                         <widget class="QLabel" name="label_2">
+                          <property name="text">
+                           <string>任务名称：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_5">
+                          <property name="text">
+                           <string>任务名称任务名称任务名称</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_2">
+                          <property name="orientation">
+                           <enum>Qt::Orientation::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>248</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_3">
+                          <property name="text">
+                           <string>实验人员：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_6">
+                          <property name="text">
+                           <string>小菜无敌</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_3">
+                          <property name="orientation">
+                           <enum>Qt::Orientation::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>248</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_4">
+                          <property name="text">
+                           <string>实验时间：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QDateTimeEdit" name="dateTimeEdit">
+                          <property name="buttonSymbols">
+                           <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTableWidget" name="tableWidget">
+                       <property name="frameShape">
+                        <enum>QFrame::Shape::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Shadow::Plain</enum>
+                       </property>
+                       <attribute name="horizontalHeaderDefaultSectionSize">
+                        <number>200</number>
+                       </attribute>
+                       <attribute name="horizontalHeaderStretchLastSection">
+                        <bool>true</bool>
+                       </attribute>
+                       <attribute name="verticalHeaderVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="verticalHeaderMinimumSectionSize">
+                        <number>50</number>
+                       </attribute>
+                       <attribute name="verticalHeaderDefaultSectionSize">
+                        <number>50</number>
+                       </attribute>
+                       <row>
+                        <property name="text">
+                         <string>注视点数</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>注视持续时间</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>首次注视时间</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>累计注视时间</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>瞳孔直径</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>眼睑开度</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>回视次数</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>眨眼率</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>眨眼时间</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>扫描路径长度</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>扫描持续时间</string>
+                        </property>
+                       </row>
+                       <column>
+                        <property name="text">
+                         <string>质量指标</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>数值</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>解释</string>
+                        </property>
+                       </column>
+                       <item row="0" column="0">
+                        <property name="text">
+                         <string>注视点数</string>
+                        </property>
+                       </item>
+                       <item row="0" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="0" column="2">
+                        <property name="text">
+                         <string>某区域内注释点</string>
+                        </property>
+                       </item>
+                       <item row="1" column="0">
+                        <property name="text">
+                         <string>注视持续时间</string>
+                        </property>
+                       </item>
+                       <item row="1" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="2" column="0">
+                        <property name="text">
+                         <string>首次注视时间</string>
+                        </property>
+                       </item>
+                       <item row="2" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="3" column="0">
+                        <property name="text">
+                         <string>累计注视时间</string>
+                        </property>
+                       </item>
+                       <item row="3" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="4" column="0">
+                        <property name="text">
+                         <string>瞳孔直径</string>
+                        </property>
+                       </item>
+                       <item row="4" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="5" column="0">
+                        <property name="text">
+                         <string>眼睑开度</string>
+                        </property>
+                       </item>
+                       <item row="5" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="6" column="0">
+                        <property name="text">
+                         <string>回视次数</string>
+                        </property>
+                       </item>
+                       <item row="6" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="7" column="0">
+                        <property name="text">
+                         <string>眨眼率</string>
+                        </property>
+                       </item>
+                       <item row="7" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="8" column="0">
+                        <property name="text">
+                         <string>眨眼时间</string>
+                        </property>
+                       </item>
+                       <item row="8" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="9" column="0">
+                        <property name="text">
+                         <string>扫描路径长度</string>
+                        </property>
+                       </item>
+                       <item row="9" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="10" column="0">
+                        <property name="text">
+                         <string>扫描持续时间</string>
+                        </property>
+                       </item>
+                       <item row="10" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_2">
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QWidget" name="widget_6" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <item>
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>任务名称：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="placeholderText">
+                        <string>请输入任务名称</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>试验人员：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_2">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="placeholderText">
+                        <string>请输入创建人</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>任务时间：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QDateEdit" name="dateEdit">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="readOnly">
+                        <bool>false</bool>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                       </property>
+                       <property name="specialValueText">
+                        <string>开始时间</string>
+                       </property>
+                       <property name="keyboardTracking">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dateTime">
+                        <datetime>
+                         <hour>8</hour>
+                         <minute>0</minute>
+                         <second>0</second>
+                         <year>1999</year>
+                         <month>12</month>
+                         <day>25</day>
+                        </datetime>
+                       </property>
+                       <property name="minimumDateTime">
+                        <datetime>
+                         <hour>8</hour>
+                         <minute>0</minute>
+                         <second>0</second>
+                         <year>1999</year>
+                         <month>12</month>
+                         <day>25</day>
+                        </datetime>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>至</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QDateEdit" name="dateEdit_2">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="readOnly">
+                        <bool>false</bool>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                       </property>
+                       <property name="specialValueText">
+                        <string>结束时间</string>
+                       </property>
+                       <property name="keyboardTracking">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dateTime">
+                        <datetime>
+                         <hour>8</hour>
+                         <minute>0</minute>
+                         <second>0</second>
+                         <year>1999</year>
+                         <month>12</month>
+                         <day>25</day>
+                        </datetime>
+                       </property>
+                       <property name="minimumDateTime">
+                        <datetime>
+                         <hour>8</hour>
+                         <minute>0</minute>
+                         <second>0</second>
+                         <year>1999</year>
+                         <month>12</month>
+                         <day>25</day>
+                        </datetime>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_6">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>29</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>搜索</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_7">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>29</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>重置</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_2">
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Plain</enum>
+                    </property>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>150</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderVisible">
+                     <bool>false</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderMinimumSectionSize">
+                     <number>50</number>
+                    </attribute>
+                    <attribute name="verticalHeaderDefaultSectionSize">
+                     <number>50</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务名称</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>试验人员</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务时间</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>操作</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_7" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                     <item>
+                      <spacer name="horizontalSpacer_9">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_10">
+                       <property name="text">
+                        <string>开始数据分析</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_10">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2">
+             <attribute name="title">
+              <string>绩效</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QWidget" name="widget_8" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_8">
+                   <property name="text">
+                    <string>最近绩效数据</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_9">
+                   <property name="text">
+                    <string>绩效总体数据</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>868</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget_2">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="page_3">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>最近绩效数据表</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_9" native="true">
+                    <layout class="QVBoxLayout" name="verticalLayout_7">
+                     <item>
+                      <widget class="QWidget" name="widget_10" native="true">
+                       <layout class="QHBoxLayout" name="horizontalLayout_7">
+                        <item>
+                         <widget class="QLabel" name="label_12">
+                          <property name="text">
+                           <string>任务名称：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_13">
+                          <property name="text">
+                           <string>任务名称任务名称任务名称</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_6">
+                          <property name="orientation">
+                           <enum>Qt::Orientation::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>248</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_14">
+                          <property name="text">
+                           <string>实验人员：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_15">
+                          <property name="text">
+                           <string>小菜无敌</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_7">
+                          <property name="orientation">
+                           <enum>Qt::Orientation::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>248</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_16">
+                          <property name="text">
+                           <string>实验时间：</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+                          <property name="buttonSymbols">
+                           <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTableWidget" name="tableWidget_3">
+                       <property name="frameShape">
+                        <enum>QFrame::Shape::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Shadow::Plain</enum>
+                       </property>
+                       <attribute name="horizontalHeaderDefaultSectionSize">
+                        <number>200</number>
+                       </attribute>
+                       <attribute name="horizontalHeaderStretchLastSection">
+                        <bool>true</bool>
+                       </attribute>
+                       <attribute name="verticalHeaderVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="verticalHeaderMinimumSectionSize">
+                        <number>50</number>
+                       </attribute>
+                       <attribute name="verticalHeaderDefaultSectionSize">
+                        <number>50</number>
+                       </attribute>
+                       <row>
+                        <property name="text">
+                         <string>总操作时间（S）</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>操作失误率（%）</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>首次注视时间（S）</string>
+                        </property>
+                       </row>
+                       <row>
+                        <property name="text">
+                         <string>任务成功率（%）</string>
+                        </property>
+                       </row>
+                       <column>
+                        <property name="text">
+                         <string>质量指标</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>数值</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>解释</string>
+                        </property>
+                       </column>
+                       <item row="0" column="0">
+                        <property name="text">
+                         <string>注视点数</string>
+                        </property>
+                       </item>
+                       <item row="0" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="0" column="2">
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </item>
+                       <item row="1" column="0">
+                        <property name="text">
+                         <string>注视持续时间</string>
+                        </property>
+                       </item>
+                       <item row="1" column="1">
+                        <property name="text">
+                         <string>10</string>
+                        </property>
+                       </item>
+                       <item row="2" column="0">
+                        <property name="text">
+                         <string>首次注视时间</string>
+                        </property>
+                       </item>
+                       <item row="2" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                       <item row="3" column="0">
+                        <property name="text">
+                         <string>累计注视时间</string>
+                        </property>
+                       </item>
+                       <item row="3" column="1">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_4">
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <item>
+                   <widget class="QWidget" name="widget_11" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <widget class="QLabel" name="label_17">
+                       <property name="text">
+                        <string>用户名</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>试验人员：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_2">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>任务类型</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_3">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_11">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>29</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>重置</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_8">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_4">
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Plain</enum>
+                    </property>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderVisible">
+                     <bool>false</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderMinimumSectionSize">
+                     <number>50</number>
+                    </attribute>
+                    <attribute name="verticalHeaderDefaultSectionSize">
+                     <number>50</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>新建行</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>ID</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>用户名</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务名</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务类型</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>操作出错率</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务完成时间</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务成功率</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>任务总操作时间</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_12" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_9">
+                     <item>
+                      <spacer name="horizontalSpacer_11">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_12">
+                       <property name="text">
+                        <string>开始数据分析</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_12">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="subPage2">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_3">
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <widget class="QWidget" name="subjective_home">
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QWidget" name="widget_13" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <item>
+                  <widget class="QWidget" name="widget_19" native="true">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QLabel" name="label_20">
+                      <property name="text">
+                       <string>任务名称：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_21">
+                      <property name="text">
+                       <string>TextLabel</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_15">
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_22">
+                      <property name="text">
+                       <string>实验人员：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_23">
+                      <property name="text">
+                       <string>TextLabel</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_16">
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_24">
+                      <property name="text">
+                       <string>实验时间：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDateTimeEdit" name="dateTimeEdit_3">
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                      </property>
+                      <property name="displayFormat">
+                       <string>yyyy-MM-dd HH:mm:ss</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTableView" name="tableView">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_15" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                 <item>
+                  <widget class="QWidget" name="widget_pie_chart" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_14"/>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_line_chart" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_15"/>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_18" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <spacer name="horizontalSpacer_13">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>472</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="detail">
+                   <property name="text">
+                    <string>查看实验数据</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_14">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>471</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="subjective_page">
+             <layout class="QVBoxLayout" name="verticalLayout_16">
+              <item>
+               <widget class="QTabWidget" name="tabWidget_2">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="tab_5">
+                 <attribute name="title">
+                  <string>本次主观数据</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <item>
+                   <widget class="QWidget" name="widget_14" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_11">
+                     <item>
+                      <widget class="QLabel" name="label_39">
+                       <property name="text">
+                        <string>主观数据表</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_21">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>869</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_22" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_20">
+                     <item>
+                      <widget class="QLabel" name="label_40">
+                       <property name="text">
+                        <string>任务名称：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_41">
+                       <property name="text">
+                        <string>任务名称任务名称任务名称</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_22">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_42">
+                       <property name="text">
+                        <string>实验人员：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_43">
+                       <property name="text">
+                        <string>小菜无敌</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_23">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_44">
+                       <property name="text">
+                        <string>实验时间：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QDateTimeEdit" name="dateTimeEdit_5">
+                       <property name="focusPolicy">
+                        <enum>Qt::FocusPolicy::NoFocus</enum>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+                       </property>
+                       <property name="displayFormat">
+                        <string>yyyy/M/d HH:mm:ss</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableView" name="subjective_current_2"/>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_6">
+                 <attribute name="title">
+                  <string>历史主观数据</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item>
+                   <widget class="QWidget" name="widget_23" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_21">
+                     <item>
+                      <widget class="QLabel" name="label_49">
+                       <property name="text">
+                        <string>用户名</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_7">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_24">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_50">
+                       <property name="text">
+                        <string>任务名</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_8">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_25">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_51">
+                       <property name="text">
+                        <string>任务类型</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_9">
+                       <item>
+                        <property name="text">
+                         <string>全部</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_23">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>29</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>重置</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_29">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableView" name="tableView_3"/>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_26" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_22">
+                     <item>
+                      <spacer name="horizontalSpacer_30">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="analyze">
+                       <property name="text">
+                        <string>开始数据分析</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_31">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="subjective_analyze">
+             <layout class="QVBoxLayout" name="verticalLayout_18">
+              <item>
+               <widget class="QWidget" name="widget_17" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                 <item>
+                  <spacer name="horizontalSpacer_37">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>482</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="subjective_return">
+                   <property name="text">
+                    <string>返回</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_16" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <item>
+                  <spacer name="horizontalSpacer_17">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>482</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_25">
+                   <property name="text">
+                    <string>实验人员</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_26">
+                   <property name="text">
+                    <string>XXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_18">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>481</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_5">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string>指标1</string>
+                 </property>
+                </item>
+                <item row="0" column="3">
+                 <property name="text">
+                  <string>指标2</string>
+                 </property>
+                </item>
+                <item row="0" column="4">
+                 <property name="text">
+                  <string>指标3</string>
+                 </property>
+                </item>
+                <item row="0" column="5">
+                 <property name="text">
+                  <string>指标4</string>
+                 </property>
+                </item>
+                <item row="0" column="6">
+                 <property name="text">
+                  <string>指标5</string>
+                 </property>
+                </item>
+                <item row="0" column="7">
+                 <property name="text">
+                  <string>指标6</string>
+                 </property>
+                </item>
+                <item row="0" column="8">
+                 <property name="text">
+                  <string>指标7</string>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>任务一</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string>问卷1</string>
+                 </property>
+                </item>
+                <item row="1" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="1" column="3">
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                </item>
+                <item row="1" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="1" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="1" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="1" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="1" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>任务一</string>
+                 </property>
+                </item>
+                <item row="2" column="1">
+                 <property name="text">
+                  <string>问卷2</string>
+                 </property>
+                </item>
+                <item row="2" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="2" column="3">
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                </item>
+                <item row="2" column="4">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="2" column="5">
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item row="2" column="6">
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item row="2" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="2" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>任务二</string>
+                 </property>
+                </item>
+                <item row="3" column="1">
+                 <property name="text">
+                  <string>问卷1</string>
+                 </property>
+                </item>
+                <item row="3" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="3" column="3">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="3" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="3" column="5">
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item row="3" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="3" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="3" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="4" column="0">
+                 <property name="text">
+                  <string>任务二</string>
+                 </property>
+                </item>
+                <item row="4" column="1">
+                 <property name="text">
+                  <string>问卷2</string>
+                 </property>
+                </item>
+                <item row="4" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="4" column="3">
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item row="4" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="4" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="4" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="4" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="4" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>任务二</string>
+                 </property>
+                </item>
+                <item row="5" column="1">
+                 <property name="text">
+                  <string>问卷3</string>
+                 </property>
+                </item>
+                <item row="5" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="5" column="3">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="5" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="5" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="5" column="6">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="5" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="5" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>任务三</string>
+                 </property>
+                </item>
+                <item row="6" column="1">
+                 <property name="text">
+                  <string>问卷1</string>
+                 </property>
+                </item>
+                <item row="6" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="6" column="3">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="6" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="6" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="6" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="6" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="6" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>任务三</string>
+                 </property>
+                </item>
+                <item row="7" column="1">
+                 <property name="text">
+                  <string>问卷2</string>
+                 </property>
+                </item>
+                <item row="7" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="7" column="3">
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item row="7" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="7" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="7" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="7" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="7" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="8" column="0">
+                 <property name="text">
+                  <string>任务三</string>
+                 </property>
+                </item>
+                <item row="8" column="1">
+                 <property name="text">
+                  <string>问卷3</string>
+                 </property>
+                </item>
+                <item row="8" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="8" column="3">
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                </item>
+                <item row="8" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="8" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="8" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="8" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="8" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="9" column="0">
+                 <property name="text">
+                  <string>任务三</string>
+                 </property>
+                </item>
+                <item row="9" column="1">
+                 <property name="text">
+                  <string>问卷4</string>
+                 </property>
+                </item>
+                <item row="9" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="9" column="3">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="9" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="9" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="9" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="9" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="9" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+                <item row="10" column="0">
+                 <property name="text">
+                  <string>任务三</string>
+                 </property>
+                </item>
+                <item row="10" column="1">
+                 <property name="text">
+                  <string>问卷5</string>
+                 </property>
+                </item>
+                <item row="10" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="10" column="3">
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                </item>
+                <item row="10" column="4">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="10" column="5">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item row="10" column="6">
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item row="10" column="7">
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </item>
+                <item row="10" column="8">
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_chart" native="true"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="subPage3">
+         <layout class="QVBoxLayout" name="verticalLayout_19">
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaContent">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1058</width>
+               <height>975</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <item>
+               <widget class="Line" name="line_3">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_24" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <spacer name="horizontalSpacer_19">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>448</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_27">
+                   <property name="text">
+                    <string>XXX任务综合评估报告</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_20">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>447</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_20" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <spacer name="horizontalSpacer_26">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>247</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_28">
+                   <property name="text">
+                    <string>任务名称：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_29">
+                   <property name="text">
+                    <string>XXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_28">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Policy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>50</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_31">
+                   <property name="text">
+                    <string>实验人员姓名：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_30">
+                   <property name="text">
+                    <string>XXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_32">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Policy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>50</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_32">
+                   <property name="text">
+                    <string>性别：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_33">
+                   <property name="text">
+                    <string>男</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_33">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Policy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>50</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_34">
+                   <property name="text">
+                    <string>年龄：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_35">
+                   <property name="text">
+                    <string>30岁</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_27">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>247</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_21" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <spacer name="horizontalSpacer_34">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>380</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_36">
+                   <property name="text">
+                    <string>所在单位：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_37">
+                   <property name="text">
+                    <string>XXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_36">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Policy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>50</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_47">
+                   <property name="text">
+                    <string>实验时间：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_46">
+                   <property name="text">
+                    <string>XXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_35">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>380</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_4">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_99">
+                <property name="text">
+                 <string>任务介绍</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_5">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_47" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_44">
+                 <item>
+                  <widget class="QLabel" name="label_100">
+                   <property name="text">
+                    <string>主观评估</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_76">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>906</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_11">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_25" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_27" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_48" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_45">
+             <item>
+              <spacer name="horizontalSpacer_77">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>443</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="export_word">
+               <property name="text">
+                <string>导出Word</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="export_pdf">
+               <property name="text">
+                <string>导出Pdf</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_78">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>442</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="res/mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

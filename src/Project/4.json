@@ -1,0 +1,2607 @@
+{
+  "buttons": [
+    {
+      "name": "尺寸（数字）",
+      "buttonId": 101001,
+      "children": [
+        {
+          "name": "14mm",
+          "buttonId": 101002,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+
+            }
+          ]
+        },
+        {
+          "name": "16mm",
+          "buttonId": 101003,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "18mm",
+          "buttonId": 101004,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "20mm",
+          "buttonId": 101005,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "22mm",
+          "buttonId": 101006,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "24mm",
+          "buttonId": 101007,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "尺寸（全键盘）",
+      "buttonId": 102001,
+      "children": [
+        {
+          "name": "14mm",
+          "buttonId": 102002,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "16mm",
+          "buttonId": 102003,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "18mm",
+          "buttonId": 102004,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "20mm",
+          "buttonId": 102005,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "22mm",
+          "buttonId": 102006,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "24mm",
+          "buttonId": 102007,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 102008,
+              "children": [
+                {
+                  "name": "A",
+                  "buttonId": 203001
+                },
+                {
+                  "name": "B",
+                  "buttonId": 203002
+                },
+                {
+                  "name": "C",
+                  "buttonId": 203003
+                },
+                {
+                  "name": "D",
+                  "buttonId": 203004
+                },
+                {
+                  "name": "E",
+                  "buttonId": 203005
+                },
+                {
+                  "name": "F",
+                  "buttonId": 203006
+                },
+                {
+                  "name": "G",
+                  "buttonId": 203007
+                },
+                {
+                  "name": "H",
+                  "buttonId": 203008
+                },
+                {
+                  "name": "I",
+                  "buttonId": 203009
+                },
+                {
+                  "name": "J",
+                  "buttonId": 203010
+                },
+                {
+                  "name": "K",
+                  "buttonId": 203011
+                },
+                {
+                  "name": "L",
+                  "buttonId": 203012
+                },
+                {
+                  "name": "M",
+                  "buttonId": 203013
+                },
+                {
+                  "name": "N",
+                  "buttonId": 203014
+                },
+                {
+                  "name": "O",
+                  "buttonId": 203015
+                },
+                {
+                  "name": "P",
+                  "buttonId": 203016
+                },
+                {
+                  "name": "Q",
+                  "buttonId": 203017
+                },
+                {
+                  "name": "R",
+                  "buttonId": 203018
+                },
+                {
+                  "name": "S",
+                  "buttonId": 203019
+                },
+                {
+                  "name": "T",
+                  "buttonId": 203020
+                },
+                {
+                  "name": "U",
+                  "buttonId": 203021
+                },
+                {
+                  "name": "V",
+                  "buttonId": 203022
+                },
+                {
+                  "name": "W",
+                  "buttonId": 203023
+                },
+                {
+                  "name": "X",
+                  "buttonId": 203024
+                },
+                {
+                  "name": "Y",
+                  "buttonId": 203025
+                },
+                {
+                  "name": "Z",
+                  "buttonId": 203026
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 102009
+                }
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "反馈样式（菜单）",
+      "buttonId": 103001,
+      "children": [
+        {
+          "name": "无样式",
+          "buttonId": 103002,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 103006,
+              "children": [
+                {
+                  "name": "人机工效",
+                  "buttonId": 201001
+                },
+                {
+                  "name": "人机交互",
+                  "buttonId": 201002
+                },
+                {
+                  "name": "人机综合",
+                  "buttonId": 201003
+                },
+                {
+                  "name": "人机融合",
+                  "buttonId": 201004
+                },
+                {
+                  "name": "人机共进",
+                  "buttonId": 201005
+                },
+                {
+                  "name": "操作程序",
+                  "buttonId": 201006
+                },
+                {
+                  "name": "作业程序",
+                  "buttonId": 201007
+                },
+                {
+                  "name": "交互逻辑",
+                  "buttonId": 201008
+                },
+                {
+                  "name": "交互接口",
+                  "buttonId": 201009
+                },
+                {
+                  "name": "操作场景",
+                  "buttonId": 201010
+                },
+                {
+                  "name": "界面架构",
+                  "buttonId": 201011
+                },
+                {
+                  "name": "界面布局",
+                  "buttonId": 201012
+                },
+                {
+                  "name": "界面层级",
+                  "buttonId": 201013
+                },
+                {
+                  "name": "交互控件",
+                  "buttonId": 201014
+                },
+                {
+                  "name": "界面元素",
+                  "buttonId": 201015
+                },
+                {
+                  "name": "座舱视野",
+                  "buttonId": 201016
+                },
+                {
+                  "name": "座舱空间",
+                  "buttonId": 201017
+                },
+                {
+                  "name": "工业设计",
+                  "buttonId": 201018
+                },
+                {
+                  "name": "空间布局",
+                  "buttonId": 201019
+                },
+                {
+                  "name": "座舱设备",
+                  "buttonId": 201020
+                },
+                {
+                  "name": "可视可达",
+                  "buttonId": 201021
+                },
+                {
+                  "name": "作业绩效",
+                  "buttonId": 201022
+                },
+                {
+                  "name": "用户体验",
+                  "buttonId": 201023
+                },
+                {
+                  "name": "感官质量",
+                  "buttonId": 201024
+                },
+                {
+                  "name": "作业负荷",
+                  "buttonId": 201025
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 103007
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "加框样式",
+          "buttonId": 103003,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 103006,
+              "children": [
+                {
+                  "name": "人机工效",
+                  "buttonId": 201001
+                },
+                {
+                  "name": "人机交互",
+                  "buttonId": 201002
+                },
+                {
+                  "name": "人机综合",
+                  "buttonId": 201003
+                },
+                {
+                  "name": "人机融合",
+                  "buttonId": 201004
+                },
+                {
+                  "name": "人机共进",
+                  "buttonId": 201005
+                },
+                {
+                  "name": "操作程序",
+                  "buttonId": 201006
+                },
+                {
+                  "name": "作业程序",
+                  "buttonId": 201007
+                },
+                {
+                  "name": "交互逻辑",
+                  "buttonId": 201008
+                },
+                {
+                  "name": "交互接口",
+                  "buttonId": 201009
+                },
+                {
+                  "name": "操作场景",
+                  "buttonId": 201010
+                },
+                {
+                  "name": "界面架构",
+                  "buttonId": 201011
+                },
+                {
+                  "name": "界面布局",
+                  "buttonId": 201012
+                },
+                {
+                  "name": "界面层级",
+                  "buttonId": 201013
+                },
+                {
+                  "name": "交互控件",
+                  "buttonId": 201014
+                },
+                {
+                  "name": "界面元素",
+                  "buttonId": 201015
+                },
+                {
+                  "name": "座舱视野",
+                  "buttonId": 201016
+                },
+                {
+                  "name": "座舱空间",
+                  "buttonId": 201017
+                },
+                {
+                  "name": "工业设计",
+                  "buttonId": 201018
+                },
+                {
+                  "name": "空间布局",
+                  "buttonId": 201019
+                },
+                {
+                  "name": "座舱设备",
+                  "buttonId": 201020
+                },
+                {
+                  "name": "可视可达",
+                  "buttonId": 201021
+                },
+                {
+                  "name": "作业绩效",
+                  "buttonId": 201022
+                },
+                {
+                  "name": "用户体验",
+                  "buttonId": 201023
+                },
+                {
+                  "name": "感官质量",
+                  "buttonId": 201024
+                },
+                {
+                  "name": "作业负荷",
+                  "buttonId": 201025
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 103007
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "变色样式",
+          "buttonId": 103004,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 103006,
+              "children": [
+                {
+                  "name": "人机工效",
+                  "buttonId": 201001
+                },
+                {
+                  "name": "人机交互",
+                  "buttonId": 201002
+                },
+                {
+                  "name": "人机综合",
+                  "buttonId": 201003
+                },
+                {
+                  "name": "人机融合",
+                  "buttonId": 201004
+                },
+                {
+                  "name": "人机共进",
+                  "buttonId": 201005
+                },
+                {
+                  "name": "操作程序",
+                  "buttonId": 201006
+                },
+                {
+                  "name": "作业程序",
+                  "buttonId": 201007
+                },
+                {
+                  "name": "交互逻辑",
+                  "buttonId": 201008
+                },
+                {
+                  "name": "交互接口",
+                  "buttonId": 201009
+                },
+                {
+                  "name": "操作场景",
+                  "buttonId": 201010
+                },
+                {
+                  "name": "界面架构",
+                  "buttonId": 201011
+                },
+                {
+                  "name": "界面布局",
+                  "buttonId": 201012
+                },
+                {
+                  "name": "界面层级",
+                  "buttonId": 201013
+                },
+                {
+                  "name": "交互控件",
+                  "buttonId": 201014
+                },
+                {
+                  "name": "界面元素",
+                  "buttonId": 201015
+                },
+                {
+                  "name": "座舱视野",
+                  "buttonId": 201016
+                },
+                {
+                  "name": "座舱空间",
+                  "buttonId": 201017
+                },
+                {
+                  "name": "工业设计",
+                  "buttonId": 201018
+                },
+                {
+                  "name": "空间布局",
+                  "buttonId": 201019
+                },
+                {
+                  "name": "座舱设备",
+                  "buttonId": 201020
+                },
+                {
+                  "name": "可视可达",
+                  "buttonId": 201021
+                },
+                {
+                  "name": "作业绩效",
+                  "buttonId": 201022
+                },
+                {
+                  "name": "用户体验",
+                  "buttonId": 201023
+                },
+                {
+                  "name": "感官质量",
+                  "buttonId": 201024
+                },
+                {
+                  "name": "作业负荷",
+                  "buttonId": 201025
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 103007
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "立体样式",
+          "buttonId": 103005,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 103006,
+              "children": [
+                {
+                  "name": "人机工效",
+                  "buttonId": 201001
+                },
+                {
+                  "name": "人机交互",
+                  "buttonId": 201002
+                },
+                {
+                  "name": "人机综合",
+                  "buttonId": 201003
+                },
+                {
+                  "name": "人机融合",
+                  "buttonId": 201004
+                },
+                {
+                  "name": "人机共进",
+                  "buttonId": 201005
+                },
+                {
+                  "name": "操作程序",
+                  "buttonId": 201006
+                },
+                {
+                  "name": "作业程序",
+                  "buttonId": 201007
+                },
+                {
+                  "name": "交互逻辑",
+                  "buttonId": 201008
+                },
+                {
+                  "name": "交互接口",
+                  "buttonId": 201009
+                },
+                {
+                  "name": "操作场景",
+                  "buttonId": 201010
+                },
+                {
+                  "name": "界面架构",
+                  "buttonId": 201011
+                },
+                {
+                  "name": "界面布局",
+                  "buttonId": 201012
+                },
+                {
+                  "name": "界面层级",
+                  "buttonId": 201013
+                },
+                {
+                  "name": "交互控件",
+                  "buttonId": 201014
+                },
+                {
+                  "name": "界面元素",
+                  "buttonId": 201015
+                },
+                {
+                  "name": "座舱视野",
+                  "buttonId": 201016
+                },
+                {
+                  "name": "座舱空间",
+                  "buttonId": 201017
+                },
+                {
+                  "name": "工业设计",
+                  "buttonId": 201018
+                },
+                {
+                  "name": "空间布局",
+                  "buttonId": 201019
+                },
+                {
+                  "name": "座舱设备",
+                  "buttonId": 201020
+                },
+                {
+                  "name": "可视可达",
+                  "buttonId": 201021
+                },
+                {
+                  "name": "作业绩效",
+                  "buttonId": 201022
+                },
+                {
+                  "name": "用户体验",
+                  "buttonId": 201023
+                },
+                {
+                  "name": "感官质量",
+                  "buttonId": 201024
+                },
+                {
+                  "name": "作业负荷",
+                  "buttonId": 201025
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 103007
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "喜好检测",
+          "buttonId": 104001,
+          "children": [
+            {
+              "name": "加框样式",
+              "buttonId": 104002,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 104005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 104006
+
+                    }
+                  ]
+
+                }
+              ]
+            },
+            {
+              "name": "变色样式",
+              "buttonId": 104003,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 104005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 104006
+
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "立体样式",
+              "buttonId": 104004,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 104005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 104006
+
+                    }
+                  ]
+                }
+              ]
+            }
+
+          ]
+            }
+      ]
+    },
+    {
+      "name": "反馈样式（数字）",
+      "buttonId": 105001,
+      "children": [
+        {
+          "name": "无样式",
+          "buttonId": 105002,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+
+            }
+          ]
+        },
+        {
+          "name": "加框样式",
+          "buttonId": 105003,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 101008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 101009
+                }
+
+              ]
+
+            }
+          ]
+        },
+        {
+          "name": "变色样式",
+          "buttonId": 105004,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 105006,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 101008,
+                  "children": [
+                    {
+                      "name": "1",
+                      "buttonId": 202001
+                    },
+                    {
+                      "name": "2",
+                      "buttonId": 202002
+                    },
+                    {
+                      "name": "3",
+                      "buttonId": 202003
+                    },
+                    {
+                      "name": "4",
+                      "buttonId": 202004
+                    },
+                    {
+                      "name": "5",
+                      "buttonId": 202005
+                    },
+                    {
+                      "name": "6",
+                      "buttonId": 202006
+                    },
+                    {
+                      "name": "7",
+                      "buttonId": 202007
+                    },
+                    {
+                      "name": "8",
+                      "buttonId": 202008
+                    },
+                    {
+                      "name": "9",
+                      "buttonId": 202009
+                    },
+                    {
+                      "name": "0",
+                      "buttonId": 202010
+                    },
+                    {
+                      "name": ".",
+                      "buttonId": 202011
+                    },
+                    {
+                      "name": "0",
+                      "buttonId": 202010
+                    },
+                    {
+                      "name": "X",
+                      "buttonId": 202012
+                    },
+                    {
+                      "name": "确认",
+                      "buttonId": 202013
+                    },
+                    {
+                      "name": "取消",
+                      "buttonId": 202014
+                    },
+                    {
+                      "name": "完成",
+                      "buttonId": 101009
+                    }
+
+                  ]
+
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "立体样式",
+          "buttonId": 105005,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 105006,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 101008,
+                  "children": [
+                    {
+                      "name": "1",
+                      "buttonId": 202001
+                    },
+                    {
+                      "name": "2",
+                      "buttonId": 202002
+                    },
+                    {
+                      "name": "3",
+                      "buttonId": 202003
+                    },
+                    {
+                      "name": "4",
+                      "buttonId": 202004
+                    },
+                    {
+                      "name": "5",
+                      "buttonId": 202005
+                    },
+                    {
+                      "name": "6",
+                      "buttonId": 202006
+                    },
+                    {
+                      "name": "7",
+                      "buttonId": 202007
+                    },
+                    {
+                      "name": "8",
+                      "buttonId": 202008
+                    },
+                    {
+                      "name": "9",
+                      "buttonId": 202009
+                    },
+                    {
+                      "name": "0",
+                      "buttonId": 202010
+                    },
+                    {
+                      "name": ".",
+                      "buttonId": 202011
+                    },
+                    {
+                      "name": "0",
+                      "buttonId": 202010
+                    },
+                    {
+                      "name": "X",
+                      "buttonId": 202012
+                    },
+                    {
+                      "name": "确认",
+                      "buttonId": 202013
+                    },
+                    {
+                      "name": "取消",
+                      "buttonId": 202014
+                    },
+                    {
+                      "name": "完成",
+                      "buttonId": 101009
+                    }
+
+                  ]
+
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "喜好检测",
+          "buttonId": 106001,
+          "children": [
+            {
+              "name": "加框样式",
+              "buttonId": 106002,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 106005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 106006
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "变色样式",
+              "buttonId": 106003,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 106005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 106006
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "立体样式",
+              "buttonId": 106004,
+              "children": [
+                {
+                  "name": "开始试验",
+                  "buttonId": 106005,
+                  "children": [
+                    {
+                      "name": "完成",
+                      "buttonId": 106006
+                    }
+                  ]
+                }
+              ]
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "name": "按键操作时间",
+      "buttonId": 107001,
+      "children": [
+        {
+          "name": "开始试验",
+          "buttonId": 107002
+        }
+      ]
+    },
+    {
+      "name": "双击按键逻辑",
+      "buttonId": 108001,
+      "children": [
+        {
+          "name": "开始试验",
+          "buttonId": 108002
+        }
+      ]
+    },
+    {
+      "name": "单击按键逻辑",
+      "buttonId": 109001,
+      "children": [
+        {
+          "name": "无机制",
+          "buttonId": 109002,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0.2s防误触",
+          "buttonId": 109003,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0.4s防误触",
+          "buttonId": 109004,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0.6s防误触",
+          "buttonId": 109005,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0.8s防误触",
+          "buttonId": 109006,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1s防误触",
+          "buttonId": 109007,
+          "children": [
+            {
+              "name": "开始试验",
+              "buttonId": 109008,
+              "children": [
+                {
+                  "name": "1",
+                  "buttonId": 202001
+                },
+                {
+                  "name": "2",
+                  "buttonId": 202002
+                },
+                {
+                  "name": "3",
+                  "buttonId": 202003
+                },
+                {
+                  "name": "4",
+                  "buttonId": 202004
+                },
+                {
+                  "name": "5",
+                  "buttonId": 202005
+                },
+                {
+                  "name": "6",
+                  "buttonId": 202006
+                },
+                {
+                  "name": "7",
+                  "buttonId": 202007
+                },
+                {
+                  "name": "8",
+                  "buttonId": 202008
+                },
+                {
+                  "name": "9",
+                  "buttonId": 202009
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": ".",
+                  "buttonId": 202011
+                },
+                {
+                  "name": "0",
+                  "buttonId": 202010
+                },
+                {
+                  "name": "X",
+                  "buttonId": 202012
+                },
+                {
+                  "name": "确认",
+                  "buttonId": 202013
+                },
+                {
+                  "name": "取消",
+                  "buttonId": 202014
+                },
+                {
+                  "name": "完成",
+                  "buttonId": 109009
+                }
+
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
