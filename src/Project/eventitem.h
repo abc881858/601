@@ -12,7 +12,10 @@ class EventItem : public QWidget
 public:
     explicit EventItem(QWidget *parent = nullptr);
     ~EventItem();
-    QString name();
+    void set_task_event(QString task_event);
+    QString task_event();
+    void set_trigger_event(QString trigger_event);
+    QString trigger_event();
 private:
     Ui::EventItem *ui;
 private slots:

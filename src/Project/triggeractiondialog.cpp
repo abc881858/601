@@ -102,10 +102,10 @@ void TriggerActionDialog::handleItemChanged(QTreeWidgetItem *item, int column)
     m_result_name = path.join(" - ");
 
     // 输出选中节点的 `buttonId`
-    qDebug() << "Selected node buttonId:" << m_result_id;
+    // qDebug() << "Selected node buttonId:" << m_result_id;
 
     // 打印选中节点的 'name'
-    qDebug() << "Selected node name:" << m_result_name;
+    // qDebug() << "Selected node name:" << m_result_name;
 }
 
 // 通过 buttonId 选中对应的节点

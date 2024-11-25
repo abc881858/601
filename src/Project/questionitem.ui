@@ -133,7 +133,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="select_questionnaire">
+          <widget class="QComboBox" name="task_questionnaire">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -155,19 +155,6 @@ border-radius:6px;
            </property>
            <property name="text">
             <string>预览</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="ok">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>确定</string>
            </property>
           </widget>
          </item>
@@ -198,7 +185,7 @@ border-radius:6px;
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="trigger_action">
+          <widget class="QPushButton" name="trigger_questionnaire">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>

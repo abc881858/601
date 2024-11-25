@@ -21,7 +21,7 @@ public:
 private:
     Ui::TriggerActionDialog *ui;
     QString m_result_name;
-    int m_result_id;
+    int m_result_id{0};
 public slots:
     void handleItemChanged(QTreeWidgetItem *item, int column);
 private slots:

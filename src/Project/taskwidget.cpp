@@ -58,15 +58,14 @@ void TaskWidget::init()
         connect(taskListItem, &TaskListItem::task_start, this, &TaskWidget::task_start);
         connect(taskListItem, &TaskListItem::task_edit, this, &TaskWidget::task_edit);
         taskListItem->set_task_name(query.value(0).toString());
-        qDebug() << query.value(0).toString();
         taskListItem->set_create_name(query.value(1).toString());
         taskListItem->set_create_time(query.value(2).toDateTime());
         taskListItem->set_task_description(query.value(3).toString());
         taskListItem->set_task_type(query.value(4).toString());
         taskListItem->set_task_path(query.value(5).toString());
         taskListItem->set_task_questionnaire(query.value(6).toString());
-        taskListItem->set_task_event(query.value(7).toString());
-        taskListItem->set_trigger_questionnaire(query.value(8).toString());
+        taskListItem->set_trigger_questionnaire(query.value(7).toString());
+        taskListItem->set_task_event(query.value(8).toString());
         taskListItem->set_trigger_event(query.value(9).toString());
         ui->taskListLayout->insertWidget(0, taskListItem);
     }
@@ -93,6 +92,21 @@ void TaskWidget::task_edit()
     ui->finish_edit->show();
 
     TaskListItem *taskListItem = qobject_cast<TaskListItem*>(sender());
+
+    QSqlQuery query(QString("SELECT * FROM task WHERE task_name = '%1';").arg(taskListItem->task_name()));
+    if(query.next())
+    {
+        taskListItem->set_create_name(query.value(1).toString());
+        taskListItem->set_create_time(query.value(2).toDateTime());
+        taskListItem->set_task_description(query.value(3).toString());
+        taskListItem->set_task_type(query.value(4).toString());
+        taskListItem->set_task_path(query.value(5).toString());
+        taskListItem->set_task_questionnaire(query.value(6).toString());
+        taskListItem->set_trigger_questionnaire(query.value(7).toString());
+        taskListItem->set_task_event(query.value(8).toString());
+        taskListItem->set_trigger_event(query.value(9).toString());
+    }
+
     ui->task_name->setText(taskListItem->task_name());
     ui->task_description->setText(taskListItem->task_description());
     QStringList task_type_list = taskListItem->task_type().split('-');
@@ -152,6 +166,7 @@ void TaskWidget::task_edit()
     }
     ui->layout_question->addStretch();
 
+    m_event_item_count = 0;
     while (QLayoutItem* item = ui->layout_event->takeAt(0)) {
         if (QWidget* widget = item->widget()) {
             widget->deleteLater();
@@ -166,13 +181,22 @@ void TaskWidget::task_edit()
     {
         QuestionItem *questionItem = new QuestionItem;
         questionItem->setNameIndex(1 + m_question_item_count);
-        questionItem->set_select_questionnaire(task_questionnaire_list.at(i));
-        questionItem->set_trigger_action(trigger_questionnaire_list.at(i).toInt());
+        questionItem->set_task_questionnaire(task_questionnaire_list.at(i));
+        questionItem->set_trigger_questionnaire(trigger_questionnaire_list.at(i).toInt());
         ui->layout_question->insertWidget(1 + m_question_item_count, questionItem);
         m_question_item_count++;
     }
 
-    taskListItem->task_event();
+    QStringList task_event_list = taskListItem->task_event().split(',');
+    QStringList trigger_event_list = taskListItem->trigger_event().split(',');
+    for(int i=0; i<task_event_list.size(); i++)
+    {
+        EventItem *eventItem = new EventItem;
+        eventItem->set_task_event(task_event_list.at(i));
+        eventItem->set_trigger_event(trigger_event_list.at(i));
+        ui->layout_event->insertWidget(1 + m_event_item_count, eventItem);
+        m_event_item_count++;
+    }
 
     ui->stack_widget->setCurrentIndex(1);
 }
@@ -273,6 +297,7 @@ QString TaskWidget::type_string()
 void TaskWidget::on_buttonSave_clicked()
 {
     QStringList task_questionnaire_list;
+    QStringList trigger_questionnaire_list;
     for(int i=0; i<ui->layout_question->count(); i++)
     {
         QLayoutItem* item = ui->layout_question->itemAt(i);
@@ -282,21 +307,38 @@ void TaskWidget::on_buttonSave_clicked()
         if (widget)
         {
             QuestionItem* questionItem = qobject_cast<QuestionItem*>(widget);
-            if (questionItem) {
-                qDebug() << "QuestionItem name:" << questionItem->name();
-                task_questionnaire_list << questionItem->name();
+            if (questionItem)
+            {
+                task_questionnaire_list << questionItem->task_questionnaire();
+                trigger_questionnaire_list << QString::number(questionItem->trigger_questionnaire());
             }
         }
     }
 
     QStringList task_event_list;
-    QStringList trigger_questionnaire_list;
     QStringList trigger_event_list;
+    for(int i=0; i<ui->layout_event->count(); i++)
+    {
+        QLayoutItem* item = ui->layout_event->itemAt(i);
+        if (!item) continue;
+
+        QWidget* widget = item->widget();
+        if (widget)
+        {
+            EventItem* eventItem = qobject_cast<EventItem*>(widget);
+            if (eventItem)
+            {
+                task_event_list << eventItem->task_event();
+                trigger_event_list << eventItem->trigger_event();
+            }
+        }
+    }
 
     QSqlQuery query;
     QString str = QString("INSERT INTO task (task_name, create_name, create_time, task_description, task_type, task_path, task_questionnaire, task_event, trigger_questionnaire, trigger_event) "
                           "VALUES ('%1', '%2', %3, '%4', '%5', '%6', '%7', '%8', '%9', '%10');")
-            .arg(ui->task_name->text(), "小菜无敌")
+            .arg(ui->task_name->text())
+            .arg("小菜无敌")
             .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss"))
             .arg(ui->task_description->toPlainText())
             .arg(type_string())
@@ -392,6 +434,7 @@ void TaskWidget::on_checkBox_type_right_clicked()
 void TaskWidget::on_finish_edit_clicked()
 {
     QStringList task_questionnaire_list;
+    QStringList trigger_questionnaire_list;
     for(int i=0; i<ui->layout_question->count(); i++)
     {
         QLayoutItem* item = ui->layout_question->itemAt(i);
@@ -401,14 +444,16 @@ void TaskWidget::on_finish_edit_clicked()
         if (widget)
         {
             QuestionItem* questionItem = qobject_cast<QuestionItem*>(widget);
-            if (questionItem) {
-                qDebug() << "QuestionItem name:" << questionItem->name();
-                task_questionnaire_list << questionItem->name();
+            if (questionItem)
+            {
+                task_questionnaire_list << questionItem->task_questionnaire();
+                trigger_questionnaire_list << QString::number(questionItem->trigger_questionnaire());
             }
         }
     }
 
     QStringList task_event_list;
+    QStringList trigger_event_list;
     for(int i=0; i<ui->layout_event->count(); i++)
     {
         QLayoutItem* item = ui->layout_event->itemAt(i);
@@ -418,15 +463,13 @@ void TaskWidget::on_finish_edit_clicked()
         if (widget)
         {
             EventItem* eventItem = qobject_cast<EventItem*>(widget);
-            if (eventItem) {
-                qDebug() << "EventItem name:" << eventItem->name();
-                task_event_list << eventItem->name();
+            if (eventItem)
+            {
+                task_event_list << eventItem->task_event();
+                trigger_event_list << eventItem->trigger_event();
             }
         }
     }
-
-    QStringList trigger_questionnaire_list;
-    QStringList trigger_event_list;
 
     QSqlQuery query;
     QString task_name = ui->task_name->text();
@@ -457,7 +500,8 @@ void TaskWidget::on_finish_edit_clicked()
         if (widget)
         {
             TaskListItem* taskListItem = qobject_cast<TaskListItem*>(widget);
-            if (taskListItem) {
+            if (taskListItem)
+            {
                 if(taskListItem->task_name() == ui->task_name->text())
                 {
                     taskListItem->set_create_name("小菜无敌");

@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include <QSqlQuery>
+#include "triggeractiondialog.h"
 
 namespace Ui {
 class QuestionItem;
@@ -12,15 +13,15 @@ class QuestionItem : public QWidget
     Q_OBJECT
 public:
     explicit QuestionItem(QWidget *parent = nullptr);
-    void setNameIndex(int nameIndex);
     ~QuestionItem();
-    QString name();
-    void set_select_questionnaire(QString text);
-    void set_trigger_action(int id);
+    void setNameIndex(int nameIndex);
+    void set_task_questionnaire(QString text);
+    QString task_questionnaire();
+    void set_trigger_questionnaire(int id);
+    int trigger_questionnaire();
 private:
     Ui::QuestionItem *ui;
+    TriggerActionDialog dialog;
 private slots:
-    void on_trigger_action_clicked();
-signals:
-    void trigger_questionnaire_changed(QString, int);
+    void on_trigger_questionnaire_clicked();    
 };
