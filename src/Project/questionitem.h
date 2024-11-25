@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QWidget>
+#include <QSqlQuery>
 
 namespace Ui {
 class QuestionItem;

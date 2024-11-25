@@ -1,6 +1,5 @@
 #include "questionitem.h"
 #include "ui_questionitem.h"
-#include <QSqlQuery>
 #include "triggeractiondialog.h"
 
 //任务下的问卷列表
@@ -11,7 +10,8 @@ QuestionItem::QuestionItem(QWidget *parent) :
     ui->setupUi(this);
 
     QStringList stringList;
-    QSqlQuery query("SELECT questionnaire_name FROM questionnaire");
+    QSqlQuery query;
+    query.exec("SELECT questionnaire_name FROM questionnaire");
     while (query.next()) {
         stringList << query.value(0).toString();
     }

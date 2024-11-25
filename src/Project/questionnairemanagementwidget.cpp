@@ -23,7 +23,7 @@ QuestionnaireManagementWidget::QuestionnaireManagementWidget(QWidget *parent) :
 
 void QuestionnaireManagementWidget::init()
 {
-    model_questionbank = new QSqlTableModel;
+    model_questionbank = new QSqlTableModel(this);
     model_questionbank->setTable("questionbank");
     model_questionbank->setEditStrategy(QSqlTableModel::OnFieldChange);
     model_questionbank->select();

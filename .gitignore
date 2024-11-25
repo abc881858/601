@@ -1,4 +1,4 @@
-
+.vs
 material/
 
 src/Project/debug/
@@ -40,3 +40,41 @@ src/Project/build/
 src/Project_20241121.zip
 
 src/Project_20241124.zip
+
+src/Project/widgetframe/lib/QWKCore.lib
+
+src/Project/widgetframe/lib/QWKCored.lib
+
+src/Project/widgetframe/lib/QWKWidgets.lib
+
+src/Project/widgetframe/lib/QWKWidgetsd.lib
+
+src/Project/widgetframe/lib/release/libQWKCore.dll.a
+
+src/Project/widgetframe/lib/release/libQWKWidgets.dll.a
+
+src/Project/ui_answerlistitem.h
+
+src/Project/ui_configlistitem.h
+
+src/Project/ui_eventchilditem.h
+
+src/Project/ui_eventitem.h
+
+src/Project/ui_questionitem.h
+
+src/Project/ui_questionlistitem.h
+
+src/Project/ui_questiontypedialog.h
+
+src/Project/ui_triggeractiondialog.h
+
+src/Project/Project.qtvscr
+
+src/Project/Project.sln
+
+src/Project/Project.vcxproj
+
+src/Project/Project.vcxproj.filters
+
+src/Project/Project.vcxproj.user

@@ -2,8 +2,12 @@ INCLUDEPATH += $$PWD/include
 INCLUDEPATH += $$PWD/include/QWKCore
 INCLUDEPATH += $$PWD/include/QWKWidgets
 
-LIBS += $$PWD/lib/libQWKCore.dll.a
-LIBS += $$PWD/lib/libQWKWidgets.dll.a
+# LIBS += $$PWD/lib/release/libQWKCore.dll.a
+# LIBS += $$PWD/lib/release/libQWKWidgets.dll.a
+
+LIBS += $$PWD/lib/debug/libQWKCore.dll.a
+LIBS += $$PWD/lib/debug/libQWKWidgets.dll.a
+
 
 HEADERS += \
     $$PWD/windowbar.h \

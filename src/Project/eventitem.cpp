@@ -10,12 +10,12 @@ EventItem::EventItem(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // QStringList stringList;
-    // QSqlQuery query("SELECT event_name FROM event");
-    // while (query.next()) {
-    //     stringList << query.value(0).toString();
-    // }
-    // ui->select_questionnaire->addItems(stringList);
+    QStringList stringList;
+    QSqlQuery query("SELECT event_name FROM event");
+    while (query.next()) {
+        stringList << query.value(0).toString();
+    }
+    //ui->select_questionnaire->addItems(stringList);
 }
 
 EventItem::~EventItem()
