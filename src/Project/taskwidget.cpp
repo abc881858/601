@@ -84,6 +84,8 @@ void TaskWidget::task_start()
     }
 
     m_task_timer->start(1000);
+
+    ui->ffmpeg_widget->start_preview("rtmp://192.168.129.154/live/livestream");
 }
 
 void TaskWidget::task_edit()
@@ -404,6 +406,8 @@ void TaskWidget::on_add_event_clicked()
 void TaskWidget::on_task_return_clicked()
 {
     ui->stack_widget->setCurrentIndex(0);
+
+    ui->ffmpeg_widget->stop_preview();
 }
 
 void TaskWidget::on_task_finish_clicked()
@@ -417,6 +421,8 @@ void TaskWidget::on_task_finish_clicked()
         process.terminate();
         process.waitForFinished(3000);
     }
+
+    ui->ffmpeg_widget->stop_preview();
 }
 
 void TaskWidget::on_checkBox_type_left_clicked()

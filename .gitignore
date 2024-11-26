@@ -78,3 +78,13 @@ src/Project/Project.vcxproj
 src/Project/Project.vcxproj.filters
 
 src/Project/Project.vcxproj.user
+
+src/Project/ffmpeg/bin/
+
+src/Project/ffmpeg/doc/
+
+src/Project/ffmpeg/lib/pkgconfig/
+
+src/Project/ffmpeg/OBS-Studio-30.2.3-Windows-Installer.exe
+
+src/Project/ffmpeg/SRS-Windows-x86_64-6.0.36-setup.zip

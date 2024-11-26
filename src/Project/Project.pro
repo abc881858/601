@@ -1,8 +1,10 @@
-QT += core gui widgets network sql
+QT += core gui widgets network sql openglwidgets
 
 CONFIG += c++17
 
 include(widgetframe/widgetframe.pri)
+
+include(ffmpeg/ffmpeg.pri)
 
 SOURCES += \
     answerlistitem.cpp \

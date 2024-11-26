@@ -41,7 +41,7 @@ background-color: #FFFFFF;
 </string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -215,22 +215,22 @@ QLineEdit:focus,QDateEdit:focus {
                </property>
                <property name="dateTime">
                 <datetime>
-                 <hour>0</hour>
+                 <hour>8</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>20</day>
+                 <day>19</day>
                 </datetime>
                </property>
                <property name="minimumDateTime">
                 <datetime>
-                 <hour>0</hour>
+                 <hour>8</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>20</day>
+                 <day>19</day>
                 </datetime>
                </property>
               </widget>
@@ -264,22 +264,22 @@ QLineEdit:focus,QDateEdit:focus {
                </property>
                <property name="dateTime">
                 <datetime>
-                 <hour>0</hour>
+                 <hour>8</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>20</day>
+                 <day>19</day>
                 </datetime>
                </property>
                <property name="minimumDateTime">
                 <datetime>
-                 <hour>0</hour>
+                 <hour>8</hour>
                  <minute>0</minute>
                  <second>0</second>
                  <year>1999</year>
                  <month>12</month>
-                 <day>20</day>
+                 <day>19</day>
                 </datetime>
                </property>
               </widget>
@@ -455,8 +455,8 @@ background-color: rgb(255, 255, 255);
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-167</y>
-            <width>1018</width>
+            <y>0</y>
+            <width>482</width>
             <height>920</height>
            </rect>
           </property>
@@ -2145,7 +2145,7 @@ background-color: #FFFFFF;
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_17" native="true">
+        <widget class="FFmpegWidget" name="ffmpeg_widget" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -2199,6 +2199,14 @@ background-color: #FFFFFF;
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FFmpegWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">ffmpegwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
